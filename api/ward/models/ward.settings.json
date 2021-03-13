@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wards",
+  "info": {
+    "name": "3. Phường / Xã",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "displayorder": {
+      "type": "integer",
+      "default": 0
+    },
+    "district": {
+      "model": "district",
+      "via": "wards"
+    },
+    "city": {
+      "model": "city",
+      "via": "wards"
+    }
+  }
+}

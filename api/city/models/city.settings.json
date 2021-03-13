@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "name": "1. Thành phố",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "displayOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "districts": {
+      "via": "city",
+      "collection": "district"
+    },
+    "wards": {
+      "via": "city",
+      "collection": "ward"
+    }
+  }
+}
